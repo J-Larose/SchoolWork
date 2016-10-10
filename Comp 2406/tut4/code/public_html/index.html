@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Directory: /Tutorial04/</title>
+		<link href="common.css" rel="stylesheet" type="text/css" />
+	</head>
+<body>
+	<div id="header"><h1>Contents of /Tutorial03/</h1></div>
+	<div id="menu"> 
+		Pages:
+		<ul>
+			<li><a href="page.html">Page</a></li>
+			<li><a href="other_page.html">other Page</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<p>You accessed this page at <span id="date"></span>. <br/>
+		<span id="target" class="warning"></span></p>
+	</div>
+	
+
+	<script>
+		var date = new Date();
+		document.getElementById("date").innerHTML=date;
+		console.log("last modified: "+document.fileModifiedDate);
+		var lastMod = Date.parse(document.lastModified);
+		console.log("Diff: "+(date.getTime()-lastMod));
+		if(date.getTime()-lastMod < 30000 ){ //30000ms = 30 seconds
+			document.getElementById("target").innerHTML = "The document was last changed less than 30 seconds ago!";
+		}
+	</script>
+</body>
+</html>

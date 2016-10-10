@@ -1,0 +1,138 @@
+            j = row+1;
+            for(int i=Icolumn+1; i<8; i++){
+                if(board.square[j][i].piece==""){
+                    moves += char(i+97);
+                    moves += char(j+49);
+                    moves += ", ";
+                }
+                else if(board.square[j][i].isWhite != white){
+                    taken += char(i+97);
+                    taken += char(j+49);
+                    taken += ", ";
+                    break;
+                }
+                else{
+                    break;
+                }
+                j++;
+            }
+            j = row-1;
+            for(int i=Icolumn-1; i>=0; i--){
+                if(board.square[j][i].piece==""){
+                    moves += char(i+97);
+                    moves += char(j+49);
+                    moves += ", ";
+                }
+                else if(board.square[j][i].isWhite != white){
+                    taken += char(i+97);
+                    taken += char(j+49);
+                    taken += ", ";
+                    break;
+                }
+                else{
+                    break;
+                }
+                j--;
+            }
+            j = Icolumn-1;
+            for(int i=row+1; i<8; i++){
+                if(board.square[i][j].piece==""){
+                    moves += char(i+97);
+                    moves += char(j+49);
+                    moves += ", ";
+                }
+                else if(board.square[i][j].isWhite != white){
+                    taken += char(i+97);
+                    taken += char(j+49);
+                    taken += ", ";
+                    break;
+                }
+                else{
+                    break;
+                }
+                j--;
+            }
+            std::cout<<taken<<std::endl;
+            j = Icolumn+1;
+            for(int i=row-1; i>=0; i--){
+                if(board.square[i][j].piece==""){
+                    moves += char(i+97);
+                    moves += char(j+49);
+                    moves += ", ";
+                }
+                else if(board.square[i][j].isWhite != white){
+                    taken += char(i+97);
+                    taken += char(j+49);
+                    taken += ", ";
+                    break;
+                }
+                else{
+                    break;
+                }
+                j++;
+            }
+            for(int i=Icolumn+1; i<8; i++){
+                if(board.square[row][i].piece==""){
+                    moves += char(i+97);
+                    moves += char(row+49);
+                    moves += ", ";
+                }
+                else if(board.square[row][i].isWhite != white){
+                    taken += char(i+97);
+                    taken += char(row+49);
+                    taken += ", ";
+                    break;
+                }
+                else{
+                    break;
+                }
+            }
+            for(int i=Icolumn-1; i>=0; i--){
+                if(board.square[row][i].piece==""){
+                    moves += char(i+97);
+                    moves += char(row+49);
+                    moves += ", ";
+                }
+                else if(board.square[row][i].isWhite != white){
+                    taken += char(i+97);
+                    taken += char(row+49);
+                    taken += ", ";
+                    break;
+                }
+                else{
+                    break;
+                }
+            }
+            for(int i=row+1; i<8; i++){
+                if(board.square[i][Icolumn].piece==""){
+                    moves += char(i+97);
+                    moves += char(row+49);
+                    moves += ", ";
+                }
+                else if(board.square[i][Icolumn].isWhite != white){
+                    taken += char(i+97);
+                    taken += char(row+49);
+                    taken += ", ";
+                    break;
+                }
+                else{
+                    break;
+                }
+            }
+            for(int i=row-1; i>=0; i--){
+                if(board.square[i][Icolumn].piece==""){
+                    moves += char(i+97);
+                    moves += char(row+49);
+                    moves += ", ";
+                }
+                else if(board.square[i][Icolumn].isWhite != white){
+                    taken += char(i+97);
+                    taken += char(row+49);
+                    taken += ", ";
+                    break;
+                }
+                else{
+                    break;
+                }
+            }
+            break;

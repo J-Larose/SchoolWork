@@ -1,0 +1,20 @@
+#include <sstream>
+#include "StudentFunctions.h"
+
+
+std::string printStudent(const StudentType &s){
+    std::stringstream out;
+    out.str("");
+    out << s.name << " (" << s.id << ")";
+    return out.str();
+}
+
+void setName(StudentType &student, std::string name){student.name = name;}
+void setID(StudentType* student, int id){student->id = id;}
+StudentType* newStudent(std::string name, int id){
+    StudentType* s = new StudentType;
+    setName(*s, name);
+    setID
+}
+
+

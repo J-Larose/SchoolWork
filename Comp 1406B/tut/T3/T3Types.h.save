@@ -1,0 +1,16 @@
+#ifndef T3TYPES_H_INCLUDED
+#define T3TYPES_H_INCLUDED
+
+#include <string>
+
+typedef double grade;
+typedef char*  letterGrade;
+
+struct StudentType{
+    std::string name;
+    int         id;
+    grade*      grades;
+};
+
+
+#endif // T3TYPES_H_INCLUDED

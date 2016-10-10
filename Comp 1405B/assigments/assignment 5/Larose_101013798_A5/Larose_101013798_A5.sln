@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Larose_101013798_Q1", "Larose_101013798_A5\Larose_101013798_Q1.pyproj", "{A3F6EE87-F408-4F3E-845E-822ED43167F2}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Larose_101013798_Q2", "Larose_101013798_Q2\Larose_101013798_Q2.pyproj", "{2EDB255C-2FD1-4D94-904C-19FE488148EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3F6EE87-F408-4F3E-845E-822ED43167F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F6EE87-F408-4F3E-845E-822ED43167F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EDB255C-2FD1-4D94-904C-19FE488148EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EDB255C-2FD1-4D94-904C-19FE488148EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

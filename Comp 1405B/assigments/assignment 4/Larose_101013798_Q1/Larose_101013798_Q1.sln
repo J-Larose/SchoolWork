@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Larose_101013798_Q1", "Larose_101013798_Q1\Larose_101013798_Q1.pyproj", "{D87161AD-C284-4CB5-A303-C91C75B8F8FD}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Larose_101013798_Q2", "Larose_101013798_Q2\Larose_101013798_Q2.pyproj", "{CED28490-0C08-4974-A24C-7DB5239C2F02}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Larose_101013798_Q3", "Larose_101013798_Q3\Larose_101013798_Q3.pyproj", "{B92250BF-9026-497B-8EE6-422653869722}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D87161AD-C284-4CB5-A303-C91C75B8F8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D87161AD-C284-4CB5-A303-C91C75B8F8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED28490-0C08-4974-A24C-7DB5239C2F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED28490-0C08-4974-A24C-7DB5239C2F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92250BF-9026-497B-8EE6-422653869722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92250BF-9026-497B-8EE6-422653869722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

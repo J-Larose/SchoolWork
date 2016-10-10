@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+
+#include "T3Types.h"
+#include "StudentFunctions.h"
+
+using namespace std;
+
+
+int main()
+{
+    StudentType  student1;
+    setname(student1, "dog");
+    setID(&student1, 2);
+    StudentType* student2 = newStudent("cat", 3);
+
+
+}

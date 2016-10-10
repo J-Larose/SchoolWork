@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1454869539 source:/Users/mjhinek/Dropbox/SCS/1406/ass/a4/COMP1406W16Assignment4/main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"A4Types.h"
+
+1454869552 source:/Users/mjhinek/Dropbox/SCS/1406/ass/a4/COMP1406W16Assignment4/Money.cpp
+	"A4Types.h"
+	<iostream>
+
+1454869202 /Users/mjhinek/Dropbox/SCS/1406/ass/a4/COMP1406W16Assignment4/A4Types.h
+	<string>
+
+1454976228 source:c:\users\mjhinek\dropbox\scs\1406\ass\a4\comp1406w16assignment4\main.cpp
+	<iostream>
+	<string>
+	"A4Types.h"
+
+1454976198 c:\users\mjhinek\dropbox\scs\1406\ass\a4\comp1406w16assignment4\a4types.h
+	<string>
+
+1455999926 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16assignment4-notbroken\main.cpp
+	<iostream>
+	<string>
+	"A4Types.h"
+
+1455984571 c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16assignment4-notbroken\a4types.h
+	<string>
+
+1456000054 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16assignment4-notbroken\money.cpp
+	"A4Types.h"
+	<iostream>
+

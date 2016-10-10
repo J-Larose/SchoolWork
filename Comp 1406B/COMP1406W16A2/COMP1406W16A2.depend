@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1454270647 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a2\chess.cpp
+	"Chess.h"
+
+1453939419 c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a2\chess.h
+	<string>
+	<iostream>
+
+1453939419 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a2\main.cpp
+	<iostream>
+	<string>
+	"Stats.h"
+	"Cards.h"
+	"Chess.h"
+
+1453729657 c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a2\stats.h
+
+1453729657 c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a2\cards.h
+	<string>
+
+1453843867 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a2\stats.cpp
+	"Stats.h"
+
+1453851335 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a2\cards.cpp
+	"Cards.h"
+

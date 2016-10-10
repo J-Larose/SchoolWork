@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1453527886 source:c:\users\mjhinek\1406\comp1406a3\main.cpp
+	<iostream>
+	"COMP1406A3.h"
+
+1453531571 c:\users\mjhinek\1406\comp1406a3\comp1406a3.h
+	<iostream>
+	<iomanip>
+	<ios>
+	<sstream>
+	<string>
+
+1453527871 source:c:\users\mjhinek\1406\comp1406a3\comp1406a3.cpp
+	"COMP1406A3.h"
+
+1453531660 source:c:\users\mjhinek\1406\comp1406a3\primes.cpp
+	"Primes.h"
+
+1453531734 c:\users\mjhinek\1406\comp1406a3\primes.h
+	<iostream>
+	<iomanip>
+	<ios>
+	<sstream>
+	<string>
+
+1453531660 source:c:\users\mjhinek\1406\comp1406a3\stoplight.cpp
+	"StopLight.h"
+
+1453531660 c:\users\mjhinek\1406\comp1406a3\stoplight.h
+	<iostream>
+
+1453761876 source:c:\users\mjhinek\downloads\comp1406a3\comp1406a3\main.cpp
+	<iostream>
+	"Primes.h"
+	"StopLight.h"
+
+1453760018 c:\users\mjhinek\downloads\comp1406a3\comp1406a3\primes.h
+	<iostream>
+	<iomanip>
+	<ios>
+	<sstream>
+	<string>
+
+1453762219 c:\users\mjhinek\downloads\comp1406a3\comp1406a3\stoplight.h
+	<iostream>
+
+1453760018 source:c:\users\mjhinek\downloads\comp1406a3\comp1406a3\primes.cpp
+	"Primes.h"
+
+1453760018 source:c:\users\mjhinek\downloads\comp1406a3\comp1406a3\stoplight.cpp
+	"StopLight.h"
+
+1454899842 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406a3\primes.cpp
+	"Primes.h"
+
+1454889299 c:\users\jacob\dropbox\uni\comp 1406b\comp1406a3\primes.h
+	<iostream>
+	<iomanip>
+	<ios>
+	<sstream>
+	<string>
+
+1454369627 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406a3\stoplight.cpp
+	"StopLight.h"
+
+1454333475 c:\users\jacob\dropbox\uni\comp 1406b\comp1406a3\stoplight.h
+	<iostream>
+
+1454899924 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406a3\main.cpp
+	<iostream>
+	"Primes.h"
+	"StopLight.h"
+

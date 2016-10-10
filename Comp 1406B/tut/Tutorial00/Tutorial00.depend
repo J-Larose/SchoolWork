@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1452300117 source:c:\users\mjhinek\1406\tutorials\tutorial00\basicio.cpp
+	<string>
+	"basicIO.h"
+
+1452300117 "
+
+1452286321 c:\users\mjhinek\1406\tutorials\tutorial00\basicio.h
+	<iostream>
+	<string>
+
+1452286291 
+
+1452299996 source:c:\users\mjhinek\1406\tutorials\tutorial00\main.cpp
+	<iostream>
+	"basicIO.h"
+	"repetition.h"
+
+1452300624 n.h"
+
+1452286291 c:\users\mjhinek\1406\tutorials\tutorial00\repetition.h
+	<iostream>
+
+1452300624 source:c:\users\mjhinek\1406\tutorials\tutorial00\repetition.cpp
+	"repetition.h"
+
+1452300118 source:/Users/mjhinek/Downloads/Tutorial00/basicIO.cpp
+	<string>
+	"basicIO.h"
+
+1452286322 /Users/mjhinek/Downloads/Tutorial00/basicIO.h
+	<iostream>
+	<string>
+
+1452537238 source:/Users/mjhinek/Downloads/Tutorial00/main.cpp
+	<iostream>
+	"basicIO.h"
+	"repetition.h"
+
+1452286292 /Users/mjhinek/Downloads/Tutorial00/repetition.h
+	<iostream>
+
+1452537143 source:/Users/mjhinek/Downloads/Tutorial00/repetition.cpp
+	"repetition.h"
+
+1452802319 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\tutorial00\basicio.cpp
+	<string>
+	"basicIO.h"
+
+1452800358 c:\users\jacob\dropbox\uni\comp 1406b\tut\tutorial00\basicio.h
+	<iostream>
+	<string>
+
+1452801986 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\tutorial00\repetition.cpp
+	"repetition.h"
+	<math.h>
+
+1452800358 c:\users\jacob\dropbox\uni\comp 1406b\tut\tutorial00\repetition.h
+	<iostream>
+
+1452801895 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\tutorial00\main.cpp
+	<iostream>
+	"basicIO.h"
+	"repetition.h"
+

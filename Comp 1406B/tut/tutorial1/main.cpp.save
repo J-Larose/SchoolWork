@@ -1,0 +1,163 @@
+/* COMP 1406 - Winter 2016 - Tutorial 1 Sample Code
+ *
+ * Sample code to create static arrays, pass them to
+ * functions and work with them inside a function.
+ *
+ * For a static array, a declaration looks like
+ *
+ *    type name[size];
+ *
+ * examples
+ *
+ *    int numbers[10];    // creates an array of 10 ints
+ *    char chars[2];      // creates an array of 2 chars
+ *    bool booleans[192]; // creates an array of 192 bools
+ *    float reals[13];    // creates an array of 13 floats
+ *
+ * Accessing elements of an array and setting the value of a
+ * position in an array is the same as in Java or Python.
+ *
+ *    booleans[2] = (2.0 * numbers[4] < reals[9]);
+ */
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+//
+// Unlike Java and Python, when you pass an array
+// into a function it does not know its length.
+//
+// We will always need to also pass in the length
+// to our functions that use arrays.
+// (unless you have a special element in the array that
+//  tells you when to stop looking in it; char arrays sometimes
+//  behave in this way using the char '\0' to indicate the end)
+//
+
+
+void printCharArray(char c[], int cLength);
+void printCharArray(char c[], int cLength);
+int sum(int numbers[], int numbersLength);
+int countVowels(char c[], int cLength);
+
+
+
+
+
+
+int countVowels(char c[], int cLength){
+    // counts lower-case vowels in the input array
+    int count = 0;
+    for(int i=0; i<cLength; ++i){
+        if( c[i] == 'a' || c[i] == 'e' || c[i] == 'i' || c[i] == 'o' || c[i] == 'u' || c[i] == 'y'){
+            count += 1;
+        } // end if
+
+    } // end for i
+    return count;
+} // end countVowels
+
+
+int main()
+{
+    // creating a static array
+    char charArray1[5];
+    charArray1[0] = 'H';
+    charArray1[1] = 'e';
+    charArray1[2] = 'l';
+    charArray1[3] = 'l';
+    charArray1[4] = 'o';
+
+    // creating a static array with initizaliation
+    // we could specify the size but the initialization
+    // will do this for us.
+    char charArray2[] = {'k', 'i', 't', 't', 'y'};
+
+    // if we create an array and only iniziation
+    // some of the values, the rest get assigned "zero"
+    char charArray3[10] = {'q'};
+
+    std::cout << "number of vowels in charArray1 is "
+              << countVowels(charArray1, 5) << std::endl;
+    std::cout << "number of vowels in charArray2 is "
+              << countVowels(charArray2, 5)  << std::endl;
+
+    printCharArray(charArray1, 5);
+    printCharArray(charArray2, 5);
+    printCharArray(charArray3, 10);
+
+    // arrays in C++ (and C) let you access positions that
+    // are outide of the array!  This can be dangerous.
+    // charArray3 is only 10 chars long.  What if we print 25
+    // characters?
+     printCharArray(charArray3, 25);
+
+    // looking at the output of charArray3
+    // what can you say about what's being stored
+    // in moemory in this program?
+
+    // let' work with ints
+    int numbers[10] = {1,2,3,4,5,6,7,8,9,10};
+
+    std::cout << "sum of fist 4 numbers is " << sum(numbers, 4) << std::endl;
+    std::cout << "sum of fist 10 numbers is " << sum(numbers, 10) << std::endl;
+
+
+    // if you try and print an arry you just get the
+    // memory location of the array
+    std::cout << "printing int array gives : " << numbers << std::endl;
+
+    // arrays of chars are a bit different though.
+    // (this is because of how they are dealth with in C)
+    // when you print a char array, it actually prints the
+    // characters... but how many?  It keeps printing characters
+    // until it find the char with value 0.  This may or may not
+    // correspond to the actual array you have.  Consider
+    // the following:
+    std::cout << "printing char arrays" << std::endl;
+    std::cout << "charArray1 = " << "\"" << charArray1 << "\"" << std::endl;
+    std::cout << "charArray2 = " << "\"" << charArray2 << "\"" << std::endl;
+
+    return 0;
+}
+
+
+void printCharArray(char c[], int cLength){
+    // print the contents of a char array
+    // in the form [X0, X1, X2, ..., Xn-1]
+    std::cout << "[";
+    for(int i=0; i<cLength-1; i+=1){
+        std::cout << c[i] << " ,";
+    }
+    if( cLength > 0){
+        std::cout << c[cLength-1];
+    }
+    std::cout << "]" << std::endl;
+}
+
+
+
+void printIntArray(int c[], int cLength){
+    // print the contents of a char array
+    // in the form [X0, X1, X2, ..., Xn-1]
+    std::cout << "[";
+    for(int i=0; i<cLength-1; i+=1){
+        std::cout << c[i] << " ,";
+    }
+    if( cLength > 0){
+        std::cout << c[cLength-1];
+    }
+    std::cout << "]" << std::endl;
+}
+
+int sum(int numbers[], int numbersLength){
+    // compute the sum of elements in an int array
+    int sum = 0;
+    for(int i=0; i<numbersLength; i = i + 1){
+        sum += numbers[i];
+    }
+    return sum;
+}

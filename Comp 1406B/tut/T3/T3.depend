@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1454289091 source:c:\users\mjhinek\1406\t3\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"T3Types.h"
+	"StudentFunctions.h"
+
+1454170958 c:\users\mjhinek\1406\t3\t3types.h
+	<string>
+
+1454289024 source:c:\users\mjhinek\1406\t3\studentfunctions.cpp
+	<sstream>
+	"StudentFunctions.h"
+
+1454204739 c:\users\mjhinek\1406\t3\studentfunctions.h
+	"T3Types.h"
+
+1454617848 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\t3\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"T3Types.h"
+	"StudentFunctions.h"
+
+1454614320 c:\users\jacob\dropbox\uni\comp 1406b\tut\t3\t3types.h
+	<string>
+
+1454614320 c:\users\jacob\dropbox\uni\comp 1406b\tut\t3\studentfunctions.h
+	"T3Types.h"
+
+1454617753 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\t3\studentfunctions.cpp
+	<sstream>
+	"StudentFunctions.h"
+

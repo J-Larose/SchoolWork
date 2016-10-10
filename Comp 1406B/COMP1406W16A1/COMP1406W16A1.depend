@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1452289468 source:c:\users\robertcollier\documents\my codeblocks\comp1406w16a1\comp1406w16a1.cpp
+	"COMP1406W16A1.h"
+
+1452289729 c:\users\robertcollier\documents\my codeblocks\comp1406w16a1\comp1406w16a1.h
+	<iostream>
+
+1452289766 source:c:\users\robertcollier\documents\my codeblocks\comp1406w16a1\main.cpp
+	"COMP1406W16A1.h"
+
+1452650739 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a1\main.cpp
+	"COMP1406W16A1.h"
+
+1452650739 c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a1\comp1406w16a1.h
+	<iostream>
+
+1452720596 source:c:\users\jacob\dropbox\uni\comp 1406b\comp1406w16a1\comp1406w16a1.cpp
+	"COMP1406W16A1.h"
+

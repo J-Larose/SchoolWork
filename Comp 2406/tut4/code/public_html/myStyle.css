@@ -1,0 +1,24 @@
+#body h1:hover {color: red;}
+
+body {
+	background-color: black;
+}
+h1 {
+	color: cyan;
+} 
+div#menu a{color :green;}
+div#menu {
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: red;
+    width: 15%;
+    height: 200px;
+    float: left;
+}
+div#body {
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: red;
+    margin-left: 16%;
+    height: 200px;
+}

@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1453495955 source:/Users/mjhinek/1406/Tutorial2/main.cpp
+	<iostream>
+	"Functions.h"
+
+1453496793 source:/Users/mjhinek/1406/Tutorial2/Functions.cpp
+	"Functions.h"
+
+1453495931 /Users/mjhinek/1406/Tutorial2/Functions.h
+	<iostream>
+	<string>
+
+1454011583 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\tut2\tutorial2\functions.cpp
+	"Functions.h"
+
+1454009913 c:\users\jacob\dropbox\uni\comp 1406b\tut\tut2\tutorial2\functions.h
+	<iostream>
+	<string>
+
+1454009913 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\tut2\tutorial2\main.cpp
+	<iostream>
+	"Functions.h"
+

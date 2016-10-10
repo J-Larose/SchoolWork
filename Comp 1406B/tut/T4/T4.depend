@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1455223494 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\t4\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"T4Types.h"
+	"StudentFunctions.h"
+
+1455219464 c:\users\jacob\dropbox\uni\comp 1406b\tut\t4\t4types.h
+
+1455219465 c:\users\jacob\dropbox\uni\comp 1406b\tut\t4\studentfunctions.h
+	<string>
+	"T4Types.h"
+
+1455223505 source:c:\users\jacob\dropbox\uni\comp 1406b\tut\t4\studentfunctions.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	"StudentFunctions.h"
+

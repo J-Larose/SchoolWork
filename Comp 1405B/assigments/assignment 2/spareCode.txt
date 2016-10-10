@@ -1,0 +1,34 @@
+#if slice is entirely contained on right 
+        if (startOfSlice<90 and  (startOfSlice+degrees)<90) or startOfSlice>=270:
+            line(400+150*math.cos(startOfSlice * math.pi/180), 250+150*math.cos(startOfSlice * math.pi/180), 560, 250+150*math.cos(startOfSlice * math.pi/180))
+            setFont("Times", "15")
+            text(560, 250+150*math.cos(startOfSlice * math.pi/180), sectors[0][x], "w")
+        #if slice is entirely contained on left 
+        elif startOfSlice>=90 and startOfSlice+degrees<270:
+            line(400+150*math.cos(startOfSlice * math.pi/180) , 250+150*math.cos(startOfSlice * math.pi/180), 240, 250+150*math.cos(startOfSlice * math.pi/180))
+            setFont("Times", "15")
+            text(240, 250+150*math.cos(startOfSlice * math.pi/180), sectors[0][x], "e")
+        #if slice starts on right and ends on left
+        elif startOfSlice<90 and (startOfSlice+degrees)>90:
+            if startOfSlice+degrees/2>=90:
+                #majority on left, so build on left
+                line(400+150*math.cos(startOfSlice * math.pi/180) , 250+150*math.cos(startOfSlice * math.pi/180), 240, 250+150*math.cos(startOfSlice * math.pi/180))
+                setFont("Times", "15")
+                text(240, 250+150*math.cos(startOfSlice * math.pi/180), sectors[0][x], "e")
+            else:
+                #majority on right so build on right
+                line(400+150*math.cos(startOfSlice * math.pi/180), 250+150*math.cos(startOfSlice * math.pi/180), 560, 250+150*math.cos(startOfSlice * math.pi/180))
+                setFont("Times", "15")
+                text(560, 250+150*math.cos(startOfSlice * math.pi/180), sectors[0][x], "w")
+        #slice starts on left and ends on right 
+        elif startOfSlice>=90 and startOfSlice>270:
+            if startOfSlice+degrees/2<270:
+                #majority on left, so build on left
+                line(400+150*math.cos(startOfSlice * math.pi/180) , 250+150*math.cos(startOfSlice * math.pi/180), 240, 250+150*math.cos(startOfSlice * math.pi/180))
+                setFont("Times", "15")
+                text(240, 250+150*math.cos(startOfSlice * math.pi/180), sectors[0][x], "e")
+            else:
+                #majority on right so build on right
+                line(400+150*math.cos(startOfSlice * math.pi/180), 250+150*math.cos(startOfSlice * math.pi/180), 560, 250+150*math.cos(startOfSlice * math.pi/180))
+                setFont("Times", "15")
+                text(560, 250+150*math.cos(startOfSlice * math.pi/180), sectors[0][x], "w")
