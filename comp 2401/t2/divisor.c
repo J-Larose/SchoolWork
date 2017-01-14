@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+
+int gcd(int a, int b);
+
+int main(void){
+  int a=0,b=0;
+  int c=0;
+  printf("Enter a\n");
+  scanf("%d", &a);
+  printf("Enter b\n");
+  scanf("%d", &b);
+
+  c = gcd(a,b);
+  printf("c = %d \n",c);
+return 0;
+}
+
+int gcd(int a, int b){
+  int i;
+
+  while(a != 0){
+    i=a;
+    a=b%a;
+    b=i;
+  }
+  
+  return b;
+}

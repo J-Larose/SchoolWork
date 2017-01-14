@@ -1,0 +1,9 @@
+Author: Jacob Larose
+Purpose: find greatest common denomenator for 2 ints
+Files: divisor.c -- divisorx
+
+compilation cmd:
+gcc -o divisorx divisor.c
+
+launch instructions:
+launch, enter 1st number, enter second number.
