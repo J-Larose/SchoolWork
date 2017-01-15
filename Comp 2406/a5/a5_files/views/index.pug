@@ -1,0 +1,37 @@
+//Jacob Larose, 101013798
+
+head
+	titleRecipe sudo-database
+	link(href="style.css" rel="stylesheet" type="text/css")
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+	script(src="/recipePage.js")
+body
+	#header
+		h1Recipe Repo
+	#menu
+		select(id="recipeSelect")
+			option Select
+		button(id = "recipeViewButton" onclick="viewRecipe()") Fetch
+	#recipe
+		label#recipename Name : <br/>
+		textarea#recipeName
+		<br/>
+		
+		label#recipeduration Duration : <br/>
+		textarea#recipeDuration
+		<br/>
+		
+		label#recipeingredients Ingredients : <br/>
+		textarea#recipeIngredients
+		<br/>
+		
+		label#recipedirections Directions : <br/>
+		textarea#recipeDirections
+		<br/>
+		
+		label#recipenotes Notes : <br/>
+		textarea#recipeNotes
+		<br/>
+		
+		button(id ="submit" onclick="sendRecipe()") Submit
+		p.check#confirmed &#x2714

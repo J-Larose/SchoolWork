@@ -1,0 +1,26 @@
+body,html {
+	background-color: #000000;
+	height : 100%;
+}
+#inputText, #chatLog{
+	border: solid 1px white;
+	width: 100%;
+	background-color : red;
+	color: white;
+}		
+#chatLog{
+	height: 200px;
+}
+#usersArea{
+	border : solid 1px white;
+	height : 250px;
+	float: left;
+	width: 19%;
+	background-color : red;
+	color: white;
+}
+#chatArea{
+	height: 100%;
+	width: 80%;
+	float :left;
+}

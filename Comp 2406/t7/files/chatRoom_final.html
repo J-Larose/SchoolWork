@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf8"/>
+	<title>Socket.IO template</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<style>
+		#inputText, #chatLog{
+			border: solid 1px black;
+			width: 100%;
+		}		
+		#chatLog{
+			height: 200px;
+		}
+		#usersArea{
+			border : solid 1px black;
+			height : 250px;
+			float: left;
+			width: 19%;
+		}
+		#chatArea{
+			height: 100%;
+			width: 80%;
+			float :left;
+		}
+	</style>
+	<script>
+		
+		$(document).ready(function(){
+		
+			var userName = prompt("What's your name?")||"User";
+			
+			var socket = io(); //connect to the server that sent this page
+			socket.on('connect', function(){
+				socket.emit("intro", userName);
+			});
+			
+			$('#inputText').keypress(function(ev){
+					if(ev.which===13){
+						//send message
+						socket.emit("message",$(this).val());
+						ev.preventDefault(); //if any
+						$("#chatLog").append((new Date()).toLocaleTimeString()+", "+userName+": "+$(this).val()+"\n")
+						$(this).val(""); //empty the input
+					}
+			});
+			
+			socket.on("message",function(data){
+				$("#chatLog").append(data+"\n");
+				$('#chatLog')[0].scrollTop=$('#chatLog')[0].scrollHeight; //scroll to the bottom
+			});
+			socket.on("userList", function(data){
+				console.log("test");
+					$("#userList").empty();
+					for(var i=0; i<data.length; i++){
+						$("#userList").append("<li>"+data[i]+"</li>");
+					}
+				}
+			);
+		});
+		
+	</script>
+</head>
+<body>
+	<div id="everything">
+	<div id="chatArea">
+		<textarea id="chatLog"></textarea>
+		<input id="inputText">
+	</div>
+	<div id="usersArea">
+		<ul id="userList"></ul>
+	</div>
+	</div>
+	
+	
+	
+</body>
+</html>

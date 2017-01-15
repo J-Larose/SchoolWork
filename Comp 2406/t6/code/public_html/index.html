@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<link rel="stylesheet" href="style.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Colo(u)rs Game</h1>
+	
+	<h2>Select this colour: <span id="userPrompt"></span></h2>
+	<table id="gameboard">
+	</table>
+</body>
+<script>
+var user = "dude";
+$.ajax({
+  method:"GET",
+  url:"/colors/user",
+  data: {'username':user},
+  success: displayGame,
+  dataType:'json'
+});
+
+function displayGame(data){
+console.log("test");
+	$("#userPrompt").empty();
+	$("#userPrompt").append(data.question);
+	$("#gameboard").empty();
+	$("#gameboard").append("<tr>");
+	for(var i=0; i<data.colors.length; i++){
+		$("#gameboard").append("<td><div class='tile' id = '"+i+"'data-index='"+i+"'></div></td>");
+		$("#"+i).css("background-color",data.colors[i]);
+		$("#"+i).click(chooseTile);
+	}
+	$("#gameboard").append("</tr>");
+	
+}
+function chooseTile(){
+	var choice = $(this).data('index');
+	$.ajax({
+  method:"GET",
+  url:"/colors/choice",
+  data: {'username': user, 'choice': choice},
+  success: displayGame,
+  dataType:'json'
+});
+}
+</script>
+</html>

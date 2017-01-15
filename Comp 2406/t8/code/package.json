@@ -1,0 +1,10 @@
+{
+  "name": "galleryServer",
+  "description": "Express server that uses cookies for a persistent gallery",
+  "main": "pictureServer.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0"
+  }
+}

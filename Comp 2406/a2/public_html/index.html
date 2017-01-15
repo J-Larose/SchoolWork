@@ -1,0 +1,137 @@
+<!-- Jacob Larose, 101013798-->
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Recipe sudo-database</title>
+		<link href="common.css" rel="stylesheet" type="text/css" />
+	</head>
+<body>
+	<div id="header"><h1>Recipe Repo</h1></div>
+	<div id="menu">
+			<select id="recipeList">
+				<option>Select</option>
+			</select>
+			<button id = "fetch" onclick="getRecipe()">Fetch</button>
+	</div>
+	<div id="recipe">
+		<label for="recipename">Name : </label><br>
+		<input type="text" id = "recipename" value=""/><br>
+		<label for="recipeduration">Duration : </label><br>
+		<input type="text" id = "recipeduration" value=""/><br>
+		<label for="recipeingredients">Ingredients : </label><br>
+		<textarea  id = "recipeingredients" value=""></textarea><br>
+		<label for="recipedirections">Directions : </label><br>
+		<textarea  id = "recipedirections" value=""></textarea><br>
+		<label for="recipenotes">Notes : </label><br>
+		<input type="text" id = "recipenotes" value=""/>
+		<input type="hidden" id="recipeTitle"><br>
+		<button id = "submit" onclick="sendRecipe()">Submit</button>
+		<img id = "success" src="./resources/checkmark.png" alt="checkmark">
+		
+	</div>
+	<script type="text/javascript">
+		//send changes to be saved
+		function sendRecipe() {
+			//build a JSON formated string for the recipes
+			var recipeString = '{"name":"'+document.getElementById('recipename').value+'",'+
+			'"duration":"'+document.getElementById('recipeduration').value+'",';
+			
+			var recipeString2 = '"ingredients":["'+document.getElementById('recipeingredients').value+'"],';
+			recipeString2 = recipeString2.replace(/\n|\r/g, '","');
+			
+			var recipeString3 = '"directions":["'+document.getElementById('recipedirections').value+'"],';
+			recipeString3 = recipeString3.replace(/\n|\r/g, '","');
+			
+			recipeString += recipeString2 + recipeString3+ '"notes":"'+document.getElementById('recipenotes').value+'"}';
+			
+			var recipeTitle = document.getElementById("recipeTitle").value;
+			//open XHR and send recipe
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("POST","/recipes/"+recipeTitle,true);
+			xhttp.addEventListener('load',function(){
+					//if recipe recieved successfully, display checkmark for 3 seconds
+					if(xhttp.status==201){
+						var checkmark = document.getElementById("success");
+						checkmark.style.visibility = "visible";
+						var timer = setTimeout(function(){
+							checkmark.style.visibility = "hidden";
+						}, 3000);
+					}
+				}
+			);
+			xhttp.send(recipeString);
+		}
+		//fetch recipe
+		function getRecipe() {
+			var xhttp = new XMLHttpRequest();
+			var recipeTitle = document.getElementById("recipeList").value;
+			xhttp.open("GET", "./recipes/"+recipeTitle, true);
+			xhttp.addEventListener('load', function(){
+					var recipeJson = xhttp.responseText;
+					console.log(recipeJson);
+					document.getElementById("recipeTitle").value = recipeTitle;
+					try{
+						var parsedJson = JSON.parse(recipeJson);
+					}catch(err){
+						alert("JSON format error: "+err);
+					}
+					
+					//populate recipe form 
+					try{
+						document.getElementById('recipename').value = parsedJson['name'];
+						document.getElementById('recipeduration').value = parsedJson['duration'];
+						
+						var ingredientsList = "";
+						for(var x = 0; x<parsedJson['ingredients'].length;x++){
+							ingredientsList += parsedJson['ingredients'][x]+'\n';
+						}
+						document.getElementById('recipeingredients').value = ingredientsList;
+						
+						var directionsList = "";
+						for(var x = 0; x<parsedJson['directions'].length;x++){
+							directionsList += parsedJson['directions'][x]+'\n';
+						}
+						document.getElementById('recipedirections').value = directionsList;
+						document.getElementById('recipenotes').value = parsedJson['notes'];
+						
+					}catch(err){
+						alert("JSON format error: "+err);
+					}
+				}
+			);
+			xhttp.send();
+		}
+		//populate dropdown list from /recipes directory
+		function popList(){			
+			var xhttp = new XMLHttpRequest();
+			
+			xhttp.open("GET", "./recipes", true);
+			xhttp.addEventListener('load', function(){
+					console.log(xhttp.status);
+					var recipeJson = xhttp.response;
+				
+			
+					var listToPop = document.getElementById("recipeList");
+					var parsedJson = JSON.parse(recipeJson);
+					var arr = [];
+					
+					for(var x in parsedJson){
+						arr.push(parsedJson[x]);
+					}
+					var y;
+					for(var x in arr){
+						console.log(typeof arr[x]);
+						y=arr[x].split('_').join(" ");
+						y = y.slice(0, y.indexOf('.'));
+						listToPop.options[listToPop.options.length] = new Option(y, arr[x]);
+					}
+				}
+			);
+			
+			xhttp.send();
+		}
+		window.onload = popList;
+	</script>
+</html>

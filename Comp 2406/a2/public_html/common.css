@@ -1,0 +1,52 @@
+/*
+Jacob Larose, 101013798
+made use of : http://www.w3schools.com/colors/colors_picker.asp
+*/
+
+body,html {
+	background-color: #646464;
+	height : 100%;
+}
+h1 {
+	color: cyan;
+} 
+div#menu {
+    float: top;
+	height : 5%;
+}
+#fetch{
+	background-color : #aa0000;
+	border : none;
+	color : white;
+}
+#submit{
+	background-color : #646464;
+	border : none;
+	margin-top : 10px;
+	float : right;
+}
+div#recipe {
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #aa0000;
+    float : bottom;
+	height : 70%;
+}
+textarea, input[type=text]{
+	margin-left : 5%;
+	width :90%;
+}
+textarea{
+	height : 25%;
+}
+label {
+	margin-left : 5%;
+	color : white;
+}
+
+
+#success{
+	visibility : hidden;
+	height: 30px;
+	width : 30px;
+}
